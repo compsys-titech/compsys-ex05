@@ -70,7 +70,7 @@ make CC=gcc check
 make CC=clang check
 ```
 
-不足ツールの導入は各環境の管理方針に従ってください．Debianでの独立検証は後続工程です．
+不足ツールの導入は各環境の管理方針に従ってください．確認済みのDebian環境と検証範囲は上の表・説明を参照してください．
 
 ### Windows x64（PowerShell）
 
@@ -313,7 +313,23 @@ GNU Makeはレシピの非0を通常2として返します．末尾の`Error 9`�
 
 スクリーンショットは任意です．テキストや結果表で実出力を記録できます．
 
-提出名は`学籍番号_ex05_code.zip`と`学籍番号_ex05_report.pdf`．提出先・締切はScience Tokyo LMSで通知します．Word雛形・正式記入ガイド・ZIPの正式な内容は後続の資料で案内します．現時点の編集対象は課題2ファイルと`tests/student_cases.c`です．
+[正式レポート記入ガイド](report/README.md)と[Word雛形](report/ex05-report-template.docx)に従って記録します．Wordの回答欄は必要に応じて増やせます．PDFへ出力して全ページを確認してください．
+
+Science Tokyo LMSへ`学籍番号_ex05_code.zip`と`学籍番号_ex05_report.pdf`を提出します．
+
+**第5回課題の締切：Science Tokyo LMSで通知**
+
+遅延提出は減点対象です．具体的な日付・減点率は教員の案内に従ってください．
+
+ZIPは次の3ファイルだけを格納し，展開した直下を`tasks/`と`tests/`にします．親フォルダー`compsys-ex05/`は付けません．
+
+```text
+tasks/adder_task.c
+tasks/alu_task.c
+tests/student_cases.c
+```
+
+`include/`，`src/`，`examples/`，`tools/`，公式テスト，Makefile，`build/`，`.git/`，ログ，実行ファイル，Word，PowerPoint，完成解答資料は含めません．別の空フォルダーへ展開し，階層と最終版の内容を確認してください．
 
 <a id="troubleshooting"></a>
 ## 困ったとき
@@ -333,4 +349,4 @@ GNU Makeはレシピの非0を通常2として返します．末尾の`Error 9`�
 
 授業資料`Compsys2026_ex05.pptx`（全38枚）を仕様の基点とします．2025年度第5・6回資料は教育意図の参考とし，型・課題分担・APIは2026年度に合わせています．
 
-運用構成は[第4回教材](https://github.com/compsys-titech/compsys-ex04/tree/b2e60f510c526c5f778611ddd925c877394dc1ce)を参考にしました．Windows配布候補は[WinLibs公式](https://winlibs.com/)です．ツール本体・Office資料・完成解答・内部検証記録は本リポジトリに含めません．
+運用構成は[第4回教材](https://github.com/compsys-titech/compsys-ex04/tree/b2e60f510c526c5f778611ddd925c877394dc1ce)を参考にしました．Windows配布候補は[WinLibs公式](https://winlibs.com/)です．Wordの空欄レポート雛形を`report/`に同梱します．ツール本体・PowerPoint・配布PDF・教員TA用Excel・完成解答・内部検証記録は本リポジトリに含めません．
