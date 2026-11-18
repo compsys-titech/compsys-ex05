@@ -35,9 +35,11 @@
 | 環境 | 状態 |
 |---|---|
 | macOS 27.2.1，Apple M4（arm64），Apple Clang 17.0.0，GNU Make 3.81 | ネイティブ実行を検証 |
-| Debian GNU/Linux | 独立検証待ち |
+| Debian GNU/Linux 13.6／x86_64，AMD EPYC 9V74，GCC 14.2.0，GNU Make 4.4.1 | 下記の範囲で検証済み。Clangは未導入のため未確認 |
 | Windows x64 | TA確認待ち |
 | 西8実習室 GNU/Linux | TA確認待ち |
+
+Debian GNU/Linuxの上記環境では，C17のコンパイル・リンク・ネイティブ実行，配布版の正常ターゲットと未完成課題の想定非0，隔離した正解・有効な別解，機能誤実装16種，異常系，日本語・空白パス，読取り専用HOME，timeout，並行実行，GCCのASan＋UBSan，プロセス・ゾンビの後始末を確認しました．構成違反5種は数値テストの合格とソースの手動判定による不適合を区別しています．この結果は記載した環境の確認であり，GNU/Linux全般やClangでの動作確認を意味しません．
 
 ### macOS
 
